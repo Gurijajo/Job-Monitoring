@@ -32,9 +32,6 @@ To run the project locally, follow these steps:
 4. Run the development server using `ng serve`.
 5. Open your web browser and visit `http://localhost:4200` to view the application.
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow the contribution guidelines outlined in the CONTRIBUTING.md file.
 
 ## Credits
 
