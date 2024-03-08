@@ -1,0 +1,43 @@
+<div class="form-content">
+  <div
+    class="counter"
+    *ngIf="unapprovedSchedules && unapprovedSchedules.length > 0"
+  >
+    {{ numRequests }}
+  </div>
+  <h2 class="form-title">Pending Schedules</h2>
+
+  <div class="form-body">
+    <span *ngIf="unapprovedSchedules.length === 0">No current requests</span>
+    <div *ngIf="unapprovedSchedules && unapprovedSchedules.length > 0">
+      <div *ngFor="let schedule of unapprovedSchedules">
+        <div class="card">
+          <h4>{{ schedule.firstName }} <br> {{ schedule.lastName }}</h4>
+          <div class="actions">
+          <p>Date: <br>{{ schedule.startTime | date : "mediumDate" }}</p>
+
+          <p>
+            Shift:
+            {{
+              schedule.startTime.slice(0, -9) < schedule.endTime.slice(0, -9)
+                ? "Evening"
+                : "Morning"
+            }}
+          </p>
+
+          <button
+            class="btn green-btn"
+            (click)="approveSchedule(schedule.id)"
+            style="margin-right: 1%"
+          >
+            Approve
+          </button>
+          <button class="btn red-btn" (click)="declineSchedule(schedule.id)">
+            Decline
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

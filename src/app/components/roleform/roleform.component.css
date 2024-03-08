@@ -1,0 +1,49 @@
+.form-content {
+  margin-block: 10px;
+  margin-inline: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  box-shadow: 3px 4px 15px 0px var(--darkGray);
+  background-color: var(--darkGreen);
+  opacity: 0.75;
+  padding: 20px;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: inline-flex;
+  vertical-align: top;
+  margin: 8px 0;
+  padding: 4px;
+  height: min-content;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.card .name {
+  text-transform: capitalize;
+  font-weight: bold;
+  max-width: 120px;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
+}
+
+.card > * {
+  margin-inline: 10px;
+}
+
+.select {
+  border: none;
+  border-radius: 0.9rem;
+  padding: 0.6em 0.8em;
+  font-size: 16px;
+  cursor: pointer;
+}

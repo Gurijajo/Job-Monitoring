@@ -1,0 +1,17 @@
+<div class="modal-wrapper" (click)="hideModal()">
+  <div class="modal-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      [attr.fill]="color"
+      viewBox="0 0 16 16"
+    >
+      <path [attr.d]="sign" />
+    </svg>
+    <h3>{{ msg }}</h3>
+    <a [routerLink]="link">{{ linkMsg }}</a>
+    <div class="actions" *ngIf="id">
+      <button class="btn red-btn" (click)="deleteSchedule()">Delete</button>
+      <button class="btn green-btn">Cancel</button>
+    </div>
+  </div>
+</div>

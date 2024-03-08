@@ -1,0 +1,24 @@
+<div class="form-content">
+  <h2 class="form-title">User Roles</h2>
+
+  <div class="form-body">
+    <span *ngIf="userData.length <= 1">No users available</span>
+    <div *ngIf="userData && userData.length > 1">
+      <div *ngFor="let user of userData">
+        <div *ngIf="user.firstName.toLowerCase() !== 'admin'" class="card">
+          <p class="name">{{ user.firstName }} {{ user.lastName }}</p>
+          <select [(ngModel)]="selectedRoleIds[user.id]" class="select">
+            <option *ngFor="let role of roleOptions" [value]="role.id">
+              {{ role.title }}
+            </option>
+          </select>
+
+          <button (click)="acceptNewRole(user.id)" class="btn general-btn">
+            Change
+          </button>
+          <button (click)="deleteUser(user.id)" class="btn red-btn">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

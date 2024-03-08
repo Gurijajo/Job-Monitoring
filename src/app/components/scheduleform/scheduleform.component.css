@@ -1,0 +1,54 @@
+.form-content {
+  margin-block: 10px;
+  margin-inline: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  box-shadow: 3px 4px 15px 0px var(--darkGray);
+  background-color: var(--darkGreen);
+  opacity: 0.75;
+  padding: 20px;
+  border-radius: 0.5rem;
+  color: white;
+  position: relative;
+}
+
+.form-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-content .form-body .card {
+  display: flex;
+  vertical-align: top;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 4px;
+  height: min-content;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions p:nth-of-type(1) {
+  display: inline-block;
+  width: 120px;
+  margin-right: 5px;
+  text-wrap: wrap;
+}
+
+.counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  transform: translate(30%, -30%);
+  width: 40px;
+  height: 40px;
+  background-color: rgb(207, 89, 89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
